@@ -1,0 +1,5 @@
+#!/bin/sh
+
+INFO=($(amixer get Master | awk -F'[][]' 'END{ print $2" "$4 }'))
+[ ${INFO[1]} == on ] && VOL="${INFO[0]}" || VOL="0%"
+echo "$VOL"

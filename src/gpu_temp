@@ -1,0 +1,5 @@
+#!/bin/sh
+
+TEMP=$(nvidia-settings -q gpucoretemp -t)
+printf "%+.1f°C\n" $TEMP
+

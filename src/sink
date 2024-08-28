@@ -1,0 +1,5 @@
+#!/bin/sh
+
+SOURCE=($(pactl list sinks short | awk '{print $1" "$2}' | sed s/alsa_output.// | dmenu -l 4))
+
+pactl set-default-sink ${SOURCE[0]}

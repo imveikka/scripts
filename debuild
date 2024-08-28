@@ -1,0 +1,7 @@
+#!/bin/sh
+
+BIN=$HOME/.local/bin
+
+for SCRIPT in $(ls src); do
+	rm $BIN/$SCRIPT
+done

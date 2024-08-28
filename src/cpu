@@ -1,0 +1,4 @@
+#!/bin/bash
+
+systemctl restart cpupower
+sudo cpupower frequency-set -d 2.8GHz

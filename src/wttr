@@ -1,0 +1,6 @@
+#!/bin/sh
+
+[[ -n $1 ]] && LOCATION=$1
+[[ -n $2 ]] && OPTIONS=$2
+
+curl -m 3 "wttr.in/$LOCATION?$OPTIONS" 2> /dev/null || echo "Weather not available"

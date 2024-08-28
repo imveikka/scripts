@@ -1,0 +1,6 @@
+#!/bin/sh
+
+TEMP=$(curl -s -m 2 wttr.in/lappeenranta?format=1 2> /dev/null | awk '/C/ {print $2}')
+[[ -z $TEMP ]] && TEMP="NaN"
+echo "$TEMP"
+

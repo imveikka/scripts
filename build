@@ -1,0 +1,8 @@
+#!/bin/sh
+
+DIR=$(pwd)/src 
+BIN=$HOME/.local/bin
+
+for SCRIPT in $(ls src); do
+	ln -s $DIR/$SCRIPT $BIN/$SCRIPT
+done

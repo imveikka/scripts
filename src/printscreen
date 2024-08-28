@@ -1,0 +1,3 @@
+#!/bin/sh
+
+maim $HOME/Pictures/Screenshots/$(date '+%s').png
